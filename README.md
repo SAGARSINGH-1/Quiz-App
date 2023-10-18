@@ -61,7 +61,6 @@ Feel free to open an issue if you find a bug or want to suggest a feature.
   <img src="https://contrib.rocks/image?repo=SAGARSINGH-1/Quiz-App" />
 </a>
 
-Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
 
