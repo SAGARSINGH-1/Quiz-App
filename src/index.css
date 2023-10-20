@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #545cff;
+    color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.25s ease-in-out;
+  }
+  button:hover {
+    border-color: #ffffff;
+    background-color: #868cff;
+  }
+
+  .img-color{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);;
+  }
+
+  .dark-opacity {
+    background-color: #1d1c1cda;
+    opacity: 0.8; /* Adjust the opacity value (0 to 1) as needed */
+  }
