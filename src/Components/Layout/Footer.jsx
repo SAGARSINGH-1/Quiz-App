@@ -7,7 +7,7 @@ export default function Footer() {
             <div className='footer flex justify-evenly gap-[15vw]'>
                 <div className='info p-10 w-[30vw]'>
                     <div className='img'>
-                        <img className='img-color' src="./src/assets/logo.png" alt="" height='150px' width='150px' />
+                        <img className='img-color' src="./assets/logo.png" alt="" height='150px' width='150px' />
                     </div>
                     <div className='text text-lg text-gray-500 my-3 font-normal'>
                         <p>Engage, Educate, and Entertain Yourself: Explore a World of Quizzes to Boost Your Knowledge and Skills.</p>
@@ -25,7 +25,7 @@ export default function Footer() {
                 </div>
 
                 <div className='btns p-5 my-auto'>
-                    <img src="./src/assets/Foot-img.webp" alt=""  height='200px' width='200px'/>
+                    <img src="./assets/Foot-img.webp" alt=""  height='200px' width='200px'/>
                 </div>
             </div>
 
@@ -38,9 +38,9 @@ export default function Footer() {
 
                 <div className='social'>
                     <ul className='flex gap-5 text-base font-semibold poppins img-color mb-2'>
-                        <li><img src="./src/assets/Icons/github.svg" alt="github"  /></li>
-                        <li><img src="./src/assets/Icons/linkedin.svg" alt="linkedin"  /></li>
-                        <li><img src="./src/assets/Icons/twitter.svg" alt="twitter"  /></li>
+                        <li><img src="./assets/Icons/github.svg" alt="github"  /></li>
+                        <li><img src="./assets/Icons/linkedin.svg" alt="linkedin"  /></li>
+                        <li><img src="./assets/Icons/twitter.svg" alt="twitter"  /></li>
                     </ul>
                 </div>
             </div>

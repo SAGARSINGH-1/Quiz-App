@@ -5,7 +5,7 @@ export default function About() {
     <div>
       <div className='flex justify-center p-5 gap-10 '>
         <div className='img'>
-            <img src="./src/assets/About.gif" alt="about" height='450px' width='450px' />
+            <img src="./assets/About.gif" alt="about" height='450px' width='450px' />
         </div>
         <div className='content p-5 m-5 mt-[8vh] w-[30vw] py-10' >
             <div className='text'>

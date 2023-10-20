@@ -11,7 +11,7 @@ export default function Question() {
             </div>
 
             <div className='img'>
-                <img src="./src/Assets/Bottom.webp" alt=""  height='300px' width="300px"/>
+                <img src="./assets/Bottom.webp" alt=""  height='300px' width="300px"/>
             </div>
       </div>
     </div>

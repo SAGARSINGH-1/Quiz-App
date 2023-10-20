@@ -19,7 +19,7 @@ export default function Hero() {
                     
                 </div>
                 <div className='img'>
-                    <img src="./src/assets/img.webp" alt="hero-img" height="550px" width="550px" />
+                    <img src="./assets/img.webp" alt="hero-img" height="550px" width="550px" />
                 </div>
             </div>
       </hero>

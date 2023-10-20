@@ -6,7 +6,7 @@ export default function Navbar() {
       <nav className='p-3 w-[100vw]'>
         <div className='flex justify-between max-w-6xl mx-auto'>
           <div className='img'>
-              <img src="./src/assets/logo.png" alt="logo" height="120px" width="120px" />
+              <img src="./assets/logo.png" alt="logo" height="120px" width="120px" />
           </div>
           <div className='link'>
             <ul className='flex gap-10 text-base font-medium mt-2 poppins text-gray-500'>
