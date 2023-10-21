@@ -5,6 +5,7 @@ import Home from "./Components/Home/01-Home"
 import About from "./Components/Home/About"
 import Contact from "./Components/Home/Contact"
 import Error from './Components/Home/Error'
+import Help from './Components/Home/Help'
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
         <Route path='' element={<Home />}/>
         <Route path='about' element={<About />}/>
         <Route path='contact' element={<Contact />}/>
+        <Route path='help' element={<Help />}/>
+
         <Route path='*' element={<Error/>} />
       </Route>
     )

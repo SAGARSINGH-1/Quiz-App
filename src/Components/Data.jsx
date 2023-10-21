@@ -100,8 +100,49 @@ export const Category = [
         value: "Laravel",
     },
 
-
-
-
-    
 ];
+
+export const questions = [
+    {
+        id: 1,
+        ques: "What Your Website do?",
+        ans: "Our website is an online platform that offers a wide range of interactive quizzes designed to enhance learning and knowledge."
+    },
+
+    {
+        id: 2,
+        ques: "How do I get started with Quizzy?",
+        ans: "To get started, simply sign up for an account, browse the available quizzes, and select the one that interests you. Click 'Start Quiz' to begin."
+    },
+
+    {
+        id: 3,
+        ques: "Do I need to pay to use here?",
+        ans: "No, Quizzy is completely free to use. You can access all quizzes and features without any cost."
+    },
+
+    {
+        id: 4,
+        ques: "How are the quiz questions created and verified for accuracy?",
+        ans: "Our quiz questions are created and reviewed by experts to ensure accuracy and quality."
+    },
+
+
+    {
+        id: 5,
+        ques: "Is my personal information safe on Quizzy?",
+        ans: "We take your privacy seriously. Your personal information is secure, and we do not share it with third parties. For more details, please refer to our Privacy Policy."
+    },
+
+    {
+        id: 6,
+        ques: " What if I forget my password or username?",
+        ans: "If you forget your password or username, click on the 'Forgot Password' link on the login page, and we'll guide you through the reset process."
+    },
+
+    {
+        id: 7,
+        ques: " What happens if I encounter a technical issue while using the website",
+        ans: "If you encounter technical issues, please contact our support team through the 'Support/Help' section, and we'll assist you in resolving the problem."
+    },
+]
