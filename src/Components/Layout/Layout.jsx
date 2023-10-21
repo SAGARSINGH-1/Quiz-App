@@ -15,7 +15,7 @@ export default function Layout() {
     // Simulate a 1-second delay
     const timeoutId = setTimeout(() => {
       setContentLoaded(true);
-    }, 2000);
+    },1);
 
     return () => {
       // Clear the timeout if the component unmounts before the delay completes
@@ -25,7 +25,7 @@ export default function Layout() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-    <div className="mb-4">
+    <div>
       {isContentLoaded ? (
         <div className='overflow-hidden'>
           <div className='banner bg-indigo-400 text-white font-medium p-2'>

@@ -34,7 +34,7 @@ export default function Footer() {
 
             <hr className='max-w-5xl mx-auto' />
 
-            <div className='subfoot flex justify-around m-5'>
+            <div className='subfoot flex justify-around mt-3'>
                 <div className='copyright'>
                     <p>@ 2045 Copyright Content</p>
                 </div>
