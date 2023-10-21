@@ -4,7 +4,7 @@ export default function Topicform() {
   return (
     <div>
         
-            <div className='form flex justify-center xl:w-[25vw] md:w-[18vw]'>
+            <div className='form flex justify-center xl:w-[25vw] md:w-[18vw] overflow-x-auto overflow-y-hidden'>
                 <form className="bg-white p-8 rounded shadow-xl text-left w-[22vw] mt-[15vh] flex flex-col justify-center">
                     <div className="mb-4">
                         <label htmlFor="field1" className="block text-gray-700 text-sm font-bold mb-2 ml-2 ">Category</label>

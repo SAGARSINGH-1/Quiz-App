@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <div>
       <hero>
-            <div className=' flex justify-center p-3'>
+            <div className=' flex justify-center p-3 overflow-hidden'>
                 <div className='text p-5 pt-10 mt-10' >
                     <div className='w-[35vw]'>
                         <p className='text-4xl m-2 text-purple-400 font-medium'>Welcome To antaira</p>

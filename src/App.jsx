@@ -2,7 +2,7 @@ import Layout from "./Components/Layout/Layout"
 
 function App() {
   return (
-    <div className="flex justify-center h-[100vh]">
+    <div className="flex justify-center overflow-hidden">
       <Layout />
     </div>
   )
