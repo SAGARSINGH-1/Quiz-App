@@ -20,7 +20,7 @@ function App() {
   )
 
   return (
-    <div className="flex justify-center h-[100vh]">
+    <div className="flex justify-center overflow-hidden">
       <RouterProvider router={router} />
     </div>
   )

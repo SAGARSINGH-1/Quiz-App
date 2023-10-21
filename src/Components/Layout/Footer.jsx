@@ -1,4 +1,7 @@
 import React from 'react'
+import {AiFillGithub , AiFillLinkedin } from 'react-icons/ai'
+import {FaXTwitter} from 'react-icons/fa6'
+
 
 export default function Footer() {
   return (
@@ -37,10 +40,10 @@ export default function Footer() {
                 </div>
 
                 <div className='social'>
-                    <ul className='flex gap-5 text-base font-semibold poppins img-color mb-2'>
-                        <li><img src="./assets/Icons/github.svg" alt="github"  /></li>
-                        <li><img src="./assets/Icons/linkedin.svg" alt="linkedin"  /></li>
-                        <li><img src="./assets/Icons/twitter.svg" alt="twitter"  /></li>
+                    <ul className='flex gap-5 text-base font-semibold poppins mb-2 text-white h-8 w-8'>
+                        <li className='cursor-pointer hover:text-pink-400'><AiFillGithub className='h-6 w-6'/> </li>
+                        <li className='cursor-pointer hover:text-pink-400'><AiFillLinkedin className='h-6 w-6' /></li>
+                        <li className='cursor-pointer hover:text-pink-400'><FaXTwitter className='h-6 w-6' /></li>
                     </ul>
                 </div>
             </div>

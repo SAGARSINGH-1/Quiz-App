@@ -8,7 +8,7 @@ export default function Topics() {
     }
   return (
     <div>
-      <div className=' p-5 max-w-7xl mx-auto'>
+      <div className=' p-5 max-w-7xl mx-auto overflow-hidden'>
             <div className='text-center m-5'>
                 <h1 className='text-4xl font-semibold'>Choose Your Category</h1>
                 <p className='text-xl text-gray-400 m-5'>Test Your Skills With our topics with a varity of questions set for beginners and senior alike</p>

@@ -7,7 +7,7 @@ import {Outlet} from 'react-router-dom'
 
 export default function Layout() {
   return (
-    <div> 
+    <div className='overflow-hidden' > 
       <div className='banner bg-indigo-400 text-white font-medium p-2'>
             <h3 className='text-center'>"Unlock Knowledge, One Question at a Time."</h3>
       </div>

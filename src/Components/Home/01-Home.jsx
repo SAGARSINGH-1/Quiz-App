@@ -6,7 +6,7 @@ import Question from './AskQuestion'
 
 export default function Home() {
   return (
-    <div>
+    <div className='overflow-x-hidden overflow-y-hidden'>
       <Hero />
       <About/>
       <Selection />
