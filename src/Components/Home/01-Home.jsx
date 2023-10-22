@@ -1,8 +1,9 @@
 import React from 'react'
 import Hero from './Hero'
 import About from './About'
-import Selection from './Selection'
 import Question from './AskQuestion'
+import Topics from './Topics'
+import { NavLink } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -25,7 +26,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Selection />
+      <Topics title="Discover Tech Challenges Quizzes"/>
+      <div className='flex justify-center'>
+          <button className=''><NavLink to={'quizzes'}>And More</NavLink> </button>
+      </div>
       <Question />
     </div>
   )
