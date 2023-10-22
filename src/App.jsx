@@ -6,6 +6,7 @@ import About from "./Components/Home/About"
 import Contact from "./Components/Home/Contact"
 import Error from './Components/Home/Error'
 import Help from './Components/Home/Help'
+import Selection from './Components/Home/Selection'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     createRoutesFromElements(
       <Route path='' element={<Layout />}>
         <Route path='' element={<Home />}/>
+        <Route path='quizzes' element={<Selection />}/>
         <Route path='about' element={<About />}/>
         <Route path='contact' element={<Contact />}/>
         <Route path='help' element={<Help />}/>

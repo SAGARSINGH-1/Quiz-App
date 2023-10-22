@@ -20,7 +20,7 @@ export default function Help() {
           {questions.map((item, index) => (
             <div key={index}>
               <div className='ques pl-8 p-5 m-5 mb-0 bg-gray-300 flex justify-between cursor-pointer ' onClick={() => toggleAnswer(index)}>
-                <h3 className='text-black font-semibold text-xl'>
+                <h3 className='text-black font-semibold text-xl select-none'>
                   <span>Q{index + 1}:</span> {item.ques}
                 </h3>
                 <div>

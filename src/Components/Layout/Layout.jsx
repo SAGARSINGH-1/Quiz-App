@@ -42,7 +42,7 @@ export default function Layout() {
       )}
     </div>
 
-    {!isContentLoaded && <p className="text-center text-gray-500">Loading...</p>}
+    {!isContentLoaded && <p className="text-center text-gray-500 mt-5">Loading...</p>}
   </div>
   )
 }
