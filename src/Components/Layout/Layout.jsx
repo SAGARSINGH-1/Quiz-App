@@ -11,13 +11,11 @@ export default function Layout() {
   const [isContentLoaded, setContentLoaded] = useState(false);
 
   useEffect(() => {
-    // Simulate a 1-second delay
     const timeoutId = setTimeout(() => {
       setContentLoaded(true);
     },1000);
 
     return () => {
-      // Clear the timeout if the component unmounts before the delay completes
       clearTimeout(timeoutId);
     };
   }, []);

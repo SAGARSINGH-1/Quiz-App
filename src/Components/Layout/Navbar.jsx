@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import {FaUserAlt } from 'react-icons/fa';
 
 export default function Navbar() {
+  const [isClicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(true);
+  };
+
   return (
     <div>
       <nav className='p-3 w-[100vw]'>
@@ -18,8 +25,12 @@ export default function Navbar() {
               <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'help'} className={({isActive})=>`${isActive? "text-red-600":""}`}>Help</NavLink> </li>
             </ul>
           </div>
-          <div>
-            <button className='prima' >Sign up</button>
+          <div className='w-[15%]'>
+             {isClicked ? (
+                <h2 className='text-xl font-semibold text-indigo-500 flex mt-1'><span className='m-3 mt-1.5'><FaUserAlt /></span>Hey! Manu</h2>
+              ) : (
+                <button onClick={handleClick}>Sign up</button>
+              )}
           </div>
         </div>
       </nav>
