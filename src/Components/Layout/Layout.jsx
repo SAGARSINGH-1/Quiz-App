@@ -15,7 +15,7 @@ export default function Layout() {
     // Simulate a 1-second delay
     const timeoutId = setTimeout(() => {
       setContentLoaded(true);
-    },1);
+    },1000);
 
     return () => {
       // Clear the timeout if the component unmounts before the delay completes
@@ -38,7 +38,7 @@ export default function Layout() {
           </div>
         </div>
       ) : (
-        <RaceBy size={100} lineWeight={5} speed={1.4} color="black" />
+        <RaceBy size={100} lineWeight={5} speed={1.4} color="#3f83f8" />
       )}
     </div>
 
