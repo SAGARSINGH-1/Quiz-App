@@ -1,8 +1,8 @@
 import React from 'react'
-import Topicform from './Topic-form'
-import Topics from './Topics'
+import Topicform from '../requirements/Topic-form'
+import Topics from '../requirements/Topics'
 
-export default function Selection() {
+export default function Quizzes() {
   return (
     <div>
         <div className='max-w-7xl flex  mx-auto overflow-x-auto overflow-y-hidden'>

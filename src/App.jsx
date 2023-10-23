@@ -1,12 +1,12 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 import Layout from "./Components/Layout/Layout"
-import Home from "./Components/Home/01-Home"
-import About from "./Components/Home/About"
-import Contact from "./Components/Home/Contact"
-import Error from './Components/Home/Error'
-import Help from './Components/Home/Help'
-import Selection from './Components/Home/Selection'
+import Home from "./Components/pages/Home"
+import About from "./Components/pages/About"
+import Contact from "./Components/pages/Contact"
+import Error from './Components/pages/Error'
+import Help from './Components/pages/Help'
+import Quizzes from './Components/pages/Quizzes'
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
     createRoutesFromElements(
       <Route path='' element={<Layout />}>
         <Route path='' element={<Home />}/>
-        <Route path='quizzes' element={<Selection />}/>
+        <Route path='quizzes' element={<Quizzes />}/>
         <Route path='about' element={<About />}/>
         <Route path='contact' element={<Contact />}/>
         <Route path='help' element={<Help />}/>

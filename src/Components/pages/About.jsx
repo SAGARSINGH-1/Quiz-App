@@ -2,7 +2,7 @@ import React from 'react';
 import { FaUserAlt } from 'react-icons/fa';
 import { BsGlobe } from 'react-icons/bs';
 import { PiChatsCircleFill } from 'react-icons/pi';
-import Swipper from './Swipper';
+import Swipper from '../requirements/Swipper';
 import {RiTwitterXFill} from 'react-icons/ri';
 import {GiChainedHeart} from 'react-icons/gi';
 

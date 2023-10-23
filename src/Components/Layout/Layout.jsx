@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 import Footer from './Footer'
 import Navbar from './Navbar'
-import Home from '../Home/01-Home'
 import {Outlet} from 'react-router-dom'
 
 import { RaceBy } from '@uiball/loaders'
