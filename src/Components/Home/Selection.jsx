@@ -10,7 +10,7 @@ export default function Selection() {
                 <Topicform/>
             </div>
             <div>
-                <Topics/>
+                <Topics title="Tech Quiz Genre Selection"/>
             </div>
         </div>
     </div>
