@@ -29,8 +29,8 @@ export default function Quizzes() {
       fetch(`https://quizapi.io/api/v1/questions?apiKey=rxU1myfAqf2i5gfRIU8epcIbanIVyG0lxmq8DYDp&limit=${no_Question}&category=${category}&difficulty=${difficulty}&type=multiple&tags=${tags}`)
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
-          setQuestions(data.results);
+          // console.log(data);
+          setQuestions(data);
           // setQuiz(true);
         });
     }
@@ -38,7 +38,7 @@ export default function Quizzes() {
 
 
   function submitHandler(e) {
-    e.preventDefault();
+    // e.preventDefault();
     fetchQuestions();
   }
 
@@ -102,7 +102,7 @@ export default function Quizzes() {
                     </select>
                   </div>
 
-                  <NavLink to="/quizzes/test" onClick={submitHandler} className='button mx-auto'>Submit</NavLink>
+                  <NavLink to="/test" onClick={submitHandler} className='button mx-auto'>Submit</NavLink>
                 </form>
               </div>
 

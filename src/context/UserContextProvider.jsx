@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from "react";
 import UserContext from "./UserContext";
 
 const UserContextProvider = ({ children }) => {
-    const [questions, setQuestions] = useState("null");
+    const [questions, setQuestions] = useState([]);
     const [correctQuestions, setCorrectQuestions] = useState(null);
     const [totalQuestions, setTotalQuestions] = useState(0); // Initialize to 0
 

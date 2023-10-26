@@ -15,9 +15,8 @@ function App() {
     createRoutesFromElements(
       <Route path='' element={<Layout />}>
         <Route path='' element={<Home />}/>
-        <Route path='quizzes' element={<Quizzes />}>
-          <Route path='quizzes/test' element={<Test/>}/>
-        </Route>
+        <Route path='quizzes' element={<Quizzes />}/>
+        <Route path='test' element={<Test/>}/>
         <Route path='about' element={<About />}/>
         <Route path='contact' element={<Contact />}/>
         <Route path='help' element={<Help />}/>
