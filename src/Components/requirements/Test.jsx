@@ -1,5 +1,5 @@
 import { BiTimer } from 'react-icons/bi';
-import { useState, useContext,useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import UserContext from "../../context/UserContext";
 import Error from '../pages/Error';
 import { RaceBy } from "@uiball/loaders";
@@ -73,7 +73,10 @@ function Test() {
                                         <button className='m-2 py-2 px-5 w-[100px] no-select' onClick={goToNextQuestion}>Next</button>
                                     </div>
                                 </div>
-                            ) : (<Error />)
+                            ) : (<div className="flex flex-col items-center top-[30vh] min-h-screen relative">
+                                <RaceBy size={100} lineWeight={5} speed={1.4} color="#3f83f8" />
+                                <p className="text-center text-gray-500 mt-5">Loading...</p>
+                            </div>)
                         }
                     </div>
                     <div className='h-[60px] w-[60px] absolute bg-indigo-200 rounded-full bottom-[-10px] left-[115px]'></div>
