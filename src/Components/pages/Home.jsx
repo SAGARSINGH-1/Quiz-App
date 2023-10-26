@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className='overflow-x-hidden overflow-y-hidden'>
       <div>
-      <hero>
+      <div>
         <div className=' flex justify-center p-3 overflow-hidden'>
           <div className='text p-5 pt-10 mt-10' >
             <div className='w-[35vw]'>
@@ -25,7 +25,7 @@ export default function Home() {
             <img src="./assets/img.webp" alt="hero-img" height="550px" width="550px" />
           </div>
         </div>
-      </hero>
+      </div>
     </div>
 
       {/* About section */}

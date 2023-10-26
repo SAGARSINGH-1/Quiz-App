@@ -7,6 +7,7 @@ import Contact from "./Components/pages/Contact"
 import Error from './Components/pages/Error'
 import Help from './Components/pages/Help'
 import Quizzes from './Components/pages/Quizzes'
+import Test from './Components/requirements/Test'
 
 function App() {
 
@@ -14,7 +15,9 @@ function App() {
     createRoutesFromElements(
       <Route path='' element={<Layout />}>
         <Route path='' element={<Home />}/>
-        <Route path='quizzes' element={<Quizzes />}/>
+        <Route path='quizzes' element={<Quizzes />}>
+          <Route path='quizzes/test' element={<Test/>}/>
+        </Route>
         <Route path='about' element={<About />}/>
         <Route path='contact' element={<Contact />}/>
         <Route path='help' element={<Help />}/>

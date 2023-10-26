@@ -18,7 +18,7 @@ export default function Topics(props) {
                 {
                     topic.map((item) =>{
                         return(
-                            <div className='relative m-3 w-[20vw] h-[20vh] overflow-hidden hover:bg-gray-400 transition rounded-lg cursor-pointer'  onClick={() => handle(item.title)}>
+                            <div key={item.id} className='relative m-3 w-[20vw] h-[20vh] overflow-hidden hover:bg-gray-400 transition rounded-lg cursor-pointer'  onClick={() => handle(item.title)}>
                                 <div className='dark-opacity'>{item.background}</div>
                                 <div className='absolute top-[-20px] left-0 w-full h-full flex items-center justify-center object-cover img-color'>{item.icon}</div>
                                 <div className='absolute top-5 left-0 flex items-center justify-center w-full h-full font-semibold text-xl mt-3 text-gray-200 '>{item.title}</div>
