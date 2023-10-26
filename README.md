@@ -58,7 +58,7 @@ Feel free to open an issue if you find a bug or want to suggest a feature.
 ## Contributors
 
 <a href="https://github.com/SAGARSINGH-1/Quiz-App/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=SAGARSINGH-1/Quiz-App" />
+  <img width='90px' height='90px' src="https://contrib.rocks/image?repo=SAGARSINGH-1/Quiz-App" />
 </a>
 
 
