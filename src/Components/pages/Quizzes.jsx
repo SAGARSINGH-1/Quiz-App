@@ -11,7 +11,7 @@ export default function Quizzes() {
   const [no_Question, setNo_Question] = useState(null);
   const [tags, setTags] = useState('');
 
-  const { questions, setQuestions } = useContext(UserContext);
+  const { setQuestions,set_tags,setTotalQuestions } = useContext(UserContext);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -39,6 +39,8 @@ export default function Quizzes() {
 
   function submitHandler(e) {
     // e.preventDefault();
+    set_tags(tags);
+    setTotalQuestions(no_Question);
     fetchQuestions();
   }
 

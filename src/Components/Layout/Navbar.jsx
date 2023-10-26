@@ -37,12 +37,12 @@ export default function Navbar() {
           </div>
           {isClicked ? (
             <div className=" relative cursor-pointer custom-dropdown">
-              <div className="selected-option text-xl font-semibold text-indigo-500 flex mt-1" onClick={toggleDropdown}><span className='m-3 mt-1.5'><FaUserAlt /></span>
+              <div className="selected-option text-xl font-semibold text-indigo-500 flex mt-1 no-select" onClick={toggleDropdown}><span className='m-3 mt-1.5'><FaUserAlt /></span>
                 Hey! Manu
               </div>
               {isDropdownOpen && (
                 <div className="dropdown-options">
-                  <button className=" absolute option-button w-[100%]" onClick={Logout}>
+                  <button className=" absolute option-button w-[100%] z-10" onClick={Logout}>
                     Logout
                   </button>
                 </div>
