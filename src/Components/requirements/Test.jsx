@@ -7,19 +7,18 @@ import { RaceBy } from "@uiball/loaders";
 
 function Test() {
     const [isContentLoaded, setContentLoaded] = useState(false);
-    const { questions,tags,totalQuestions } = useContext(UserContext);
+    const { answers,questions,tags,totalQuestions } = useContext(UserContext);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    console.log("questions here ", questions);
     const questionTime = 20; // Time allocated for each question in seconds
     const [timeRemaining, setTimeRemaining] = useState(questionTime);
-
+    const [selectedOptions, setSelectedOptions] = useState([]);
     // Question time
     useEffect(() => {
         if (timeRemaining > 0) {
             // Start a timer to decrement time remaining
             const timer = setTimeout(() => {
                 setTimeRemaining(timeRemaining - 1);
-            }, 1000); // 1000 ms = 1 second
+            }, 1100); // 1000 ms = 1 second
 
             // Clear the timer when the component unmounts or when time runs out
             return () => clearTimeout(timer);
@@ -58,6 +57,18 @@ function Test() {
 
     const currentQuestion = questions[currentQuestionIndex];
 
+    function optionHandler(event,option) {
+        if (answers[currentQuestionIndex].includes(option)) {
+            setSelectedOptions([...selectedOptions, {currentQuestionIndex: option}]);
+            event.target.classList.add('bg-green-500');
+            console.log('correct');
+        }else{
+            event.target.classList.add('bg-red-500');
+            console.log('incorrect');
+        }
+        // goToNextQuestion();
+    }
+
     return (
         <>
             {isContentLoaded ? (
@@ -71,22 +82,22 @@ function Test() {
                                         <h1 className='text-lg py-4 relative text-center'>
                                             {currentQuestion.question}
                                             <span className='absolute top-[-29px] text-white font-semibold px-4 bg-indigo-500 left-[41%] rounded-3xl py-2'>
-                                                {tags} | {totalQuestions}
+                                                {tags} | Q{currentQuestionIndex+1}/{totalQuestions}
                                             </span>
                                         </h1>
                                     </div>
                                     <div className='border w-[45rem] gap-3 my-4 flex flex-wrap justify-between items-center '>
-                                        <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]'>
+                                        <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]' onClick={(e)=>optionHandler(e,'answer_a_correct')}>
                                             {currentQuestion.answers.answer_a}
                                         </div>
-                                        <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]'>
+                                        <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]' onClick={(e)=>optionHandler(e,'answer_b_correct')}>
                                             {currentQuestion.answers.answer_b}
                                         </div>
-                                        <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]'>
-                                            {currentQuestion.answers.answer_c? currentQuestion.answers.answer_c : "NaN"}
+                                        <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]' onClick={(e)=>optionHandler(e,'answer_c_correct')}>
+                                            {currentQuestion.answers.answer_c? currentQuestion.answers.answer_c : "Unavailable"}
                                         </div>
-                                        <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]'>
-                                            {currentQuestion.answers.answer_d? currentQuestion.answers.answer_d : "NaN"}
+                                        <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]' onClick={(e)=>optionHandler(e,'answer_d_correct')}>
+                                            {currentQuestion.answers.answer_d? currentQuestion.answers.answer_d : "Unavailable"}
                                         </div>
                                     </div>
                                     <div className='mb-2'>
