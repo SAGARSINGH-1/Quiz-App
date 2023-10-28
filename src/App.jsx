@@ -8,6 +8,7 @@ import Error from './Components/pages/Error'
 import Help from './Components/pages/Help'
 import Quizzes from './Components/pages/Quizzes'
 import Test from './Components/requirements/Test'
+import Result from './Components/requirements/Result'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='about' element={<About />}/>
         <Route path='contact' element={<Contact />}/>
         <Route path='help' element={<Help />}/>
+        <Route path='result' element={<Result/>} />
 
         <Route path='*' element={<Error/>} />
       </Route>

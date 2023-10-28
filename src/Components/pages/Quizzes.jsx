@@ -23,20 +23,28 @@ export default function Quizzes() {
     };
   }, []);
 
-
   function fetchQuestions() {
     if (no_Question && category && difficulty && tags) {
       fetch(`https://quizapi.io/api/v1/questions?apiKey=rxU1myfAqf2i5gfRIU8epcIbanIVyG0lxmq8DYDp&limit=${no_Question}&category=${category}&difficulty=${difficulty}&type=multiple&tags=${tags}`)
         .then((response) => response.json())
         .then((data) => {
           setQuestions(data);
-          setAnswers(data.map((item) => {
-            const trueKeys = Object.keys(item.correct_answers).filter(key => item.correct_answers[key] === 'true');
-            return trueKeys;
-        }));
+  
+          const answers = data.map((item) => {
+            if (item.correct_answers && typeof item.correct_answers === 'object') {
+              const trueKeys = Object.keys(item.correct_answers).filter((key) => item.correct_answers[key] === 'true');
+              return trueKeys;
+            }
+            // Handle the case when correct_answers is not an object (e.g., when it's missing or of the wrong type)
+            return [];
+          });
+  
+          setAnswers(answers);
+          console.log(answers);
         });
     }
   }
+  
 
 
   function submitHandler(e) {
