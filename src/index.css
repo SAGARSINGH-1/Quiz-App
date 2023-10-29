@@ -31,3 +31,8 @@ button,.button {
   .no-select {
     user-select: none;
   }
+
+  .select{
+    background-color:green;
+    color: white;
+  }

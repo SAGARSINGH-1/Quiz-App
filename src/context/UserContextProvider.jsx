@@ -6,7 +6,8 @@ const UserContextProvider = ({ children }) => {
     const [correctQuestions, setCorrectQuestions] = useState(null);
     const [totalQuestions, setTotalQuestions] = useState(0); // Initialize to 0     
     const [tags, set_tags] = useState(''); // Initialize to 0    
-    const [answers, setAnswers] = useState(null);
+    const [answers, setAnswers] = useState('');
+    const [selectedOptions, setSelectedOptions] = useState([]);
 
     useEffect(() => {
         console.log(answers);
@@ -18,7 +19,7 @@ const UserContextProvider = ({ children }) => {
 
 
     return (
-        <UserContext.Provider value={{ questions, setQuestions, correctQuestions, setCorrectQuestions, setTotalQuestions, totalQuestions, set_tags, tags, setAnswers ,answers }}>
+        <UserContext.Provider value={{ questions, setQuestions, correctQuestions, setCorrectQuestions, setTotalQuestions, totalQuestions, set_tags, tags, setAnswers ,answers,selectedOptions,setSelectedOptions }}>
             {children}
         </UserContext.Provider>
     );

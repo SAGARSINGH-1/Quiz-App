@@ -11,7 +11,7 @@ export default function Quizzes() {
   const [no_Question, setNo_Question] = useState(null);
   const [tags, setTags] = useState('');
 
-  const { setAnswers,setQuestions, set_tags, setTotalQuestions } = useContext(UserContext);
+  const { setAnswers, setQuestions, set_tags, setTotalQuestions } = useContext(UserContext);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -29,7 +29,7 @@ export default function Quizzes() {
         .then((response) => response.json())
         .then((data) => {
           setQuestions(data);
-  
+
           const answers = data.map((item) => {
             if (item.correct_answers && typeof item.correct_answers === 'object') {
               const trueKeys = Object.keys(item.correct_answers).filter((key) => item.correct_answers[key] === 'true');
@@ -38,13 +38,12 @@ export default function Quizzes() {
             // Handle the case when correct_answers is not an object (e.g., when it's missing or of the wrong type)
             return [];
           });
-  
+
           setAnswers(answers);
-          console.log(answers);
         });
     }
   }
-  
+
 
 
   function submitHandler(e) {

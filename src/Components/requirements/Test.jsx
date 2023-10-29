@@ -1,20 +1,18 @@
 import { BiTimer } from 'react-icons/bi';
 import { useState, useContext, useEffect } from "react";
 import UserContext from "../../context/UserContext";
-import Error from '../pages/Error';
 import { RaceBy } from "@uiball/loaders";
 import { NavLink } from 'react-router-dom';
-import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from 'react-icons/md'
-
+import {FaRegCheckCircle} from 'react-icons/fa';
 
 function Test() {
     const [isContentLoaded, setContentLoaded] = useState(false);
-    const { answers, questions, tags, totalQuestions } = useContext(UserContext);
+    const { answers, questions, tags, totalQuestions, selectedOptions, setSelectedOptions } = useContext(UserContext);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const questionTime = 20; // Time allocated for each question in seconds
     const [timeRemaining, setTimeRemaining] = useState(questionTime);
-    const [selectedOptions, setSelectedOptions] = useState([]);
     const [submit, setSubmit] = useState(false);
+    let selected=null;
     // Question time
     useEffect(() => {
         if (timeRemaining > 0) {
@@ -48,15 +46,8 @@ function Test() {
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
             setTimeRemaining(questionTime)
-        } else {
+        } else if (currentQuestionIndex === questions.length - 1) {
             setSubmit(true);
-        }
-    };
-
-    const goToPreviousQuestion = () => {
-        if (currentQuestionIndex > 0) {
-            setCurrentQuestionIndex(currentQuestionIndex - 1);
-            setTimeRemaining(questionTime)
         }
     };
 
@@ -64,15 +55,11 @@ function Test() {
 
     function optionHandler(event, option) {
         if (answers[currentQuestionIndex].includes(option)) {
-            setSelectedOptions([...selectedOptions, { currentQuestionIndex: option }]);
-            event.target.classList.add('bg-green-500');
-            console.log('correct');
-        } else {
-            event.target.classList.add('bg-red-500');
-            console.log('incorrect');
+            setSelectedOptions([...selectedOptions, { currentQuestionIndex, option }]);
         }
-        // goToNextQuestion();
+        goToNextQuestion();
     }
+
 
     return (
         <>
@@ -106,8 +93,7 @@ function Test() {
                                         </div>
                                     </div>
                                     <div className='mb-2'>
-                                        <button className='m-2 py-2 px-5 min-w-max no-select' onClick={goToPreviousQuestion}><MdOutlineNavigateBefore className=' inline mb-[1px] text-2xl' />Previous</button>
-                                        <button className='m-2 py-2 px-5 min-w-max no-select' onClick={goToNextQuestion}><NavLink to={submit ? "/result" : ""}>Next<MdOutlineNavigateNext className='inline mb-[1px] text-2xl' /></NavLink></button>
+                                        <button className='m-2 py-2 px-5 min-w-max no-select' onClick={goToNextQuestion}><NavLink to={submit ? "/result" : ""}>Submit<FaRegCheckCircle className='inline mb-[3px] ml-2 text-xl' /></NavLink></button>
                                     </div>
                                 </div>
                             </div>) : (<div className='text-3xl font-bold text-center'>
