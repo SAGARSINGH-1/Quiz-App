@@ -1,6 +1,7 @@
 import React from 'react'
 import {AiFillGithub , AiFillLinkedin } from 'react-icons/ai'
 import {FaXTwitter} from 'react-icons/fa6'
+import { NavLink } from 'react-router-dom'
 
 
 export default function Footer() {
@@ -18,11 +19,11 @@ export default function Footer() {
 
                     <div className='my-5'>
                         <ul className='flex gap-5 text-base font-semibold mt-2 poppins'>
-                            <li className='hover:text-yellow-200 cursor-pointer'>Home</li>
-                            <li className='hover:text-yellow-200 cursor-pointer'>Features</li>
+                            <NavLink to={''} className='hover:text-yellow-200 cursor-pointer'>Home</NavLink>
+                            <NavLink to={'/help'} className='hover:text-yellow-200 cursor-pointer'>Features</NavLink>
                             <li className='hover:text-yellow-200 cursor-pointer'>Blog</li>
-                            <li className='hover:text-yellow-200 cursor-pointer'>Help</li>
-                            <li className='hover:text-yellow-200 cursor-pointer'>Privacy</li>
+                            <NavLink to={'/help'} className='hover:text-yellow-200 cursor-pointer'>Help</NavLink>
+                            <NavLink to={'/help'} className='hover:text-yellow-200 cursor-pointer'>Privacy</NavLink>
                         </ul>
                     </div>
                 </div>
@@ -41,7 +42,7 @@ export default function Footer() {
 
                 <div className='social'>
                     <ul className='flex gap-5 text-base font-semibold poppins mb-2 text-white h-8 w-8'>
-                        <li className='cursor-pointer hover:text-pink-400'><AiFillGithub className='h-6 w-6'/> </li>
+                        <NavLink target='_blank' to={'https://github.com/SAGARSINGH-1/Quiz-App'} className='cursor-pointer hover:text-pink-400'><AiFillGithub className='h-6 w-6'/> </NavLink>
                         <li className='cursor-pointer hover:text-pink-400'><AiFillLinkedin className='h-6 w-6' /></li>
                         <li className='cursor-pointer hover:text-pink-400'><FaXTwitter className='h-6 w-6' /></li>
                     </ul>
