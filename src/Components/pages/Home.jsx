@@ -16,8 +16,8 @@ export default function Home() {
               <h1 className='text-5xl m-2 '>Mastery</h1>
               <p className='m-4 mt-10 text-gray-400 text-lg'> Get Ready to Test Your Knowledge, Elevate Embark on a Journey of Discovery, Wisdom, and Fun through Our Enriching World of Quizzes  </p>
             </div>
-            <div className='ml-5'>
-              <button className='m-5'>Get Started</button>
+            <div className='ml-7 mt-12'>
+              <NavLink to={'/quizzes'} className='button'>Get Started</NavLink>
             </div>
 
           </div>
@@ -37,23 +37,23 @@ export default function Home() {
           <div className='text'>
             <h4 className='text-2xl text-indigo-500 font-semibold ml-5'> Lifelong Learning</h4>
             <h1 className='text-4xl font-semibold m-3'>Nurturing Curiosity Through Quizzes</h1>
-            <p className='text-lg text-gray-500 m-5'>At our platform, we believe in the power of quizzes to enhance your learning adventure.</p>
+            <p className='text-lg text-gray-500 m-5 mb-9'>At our platform, we believe in the power of quizzes to enhance your learning adventure.</p>
           </div>
           <div>
-            <button className='ml-10'>Know More</button>
+            <NavLink to={'/quizzes'} className='button ml-10'>Know more</NavLink>
           </div>
         </div>
       </div>
       <Topics title="Discover Tech Challenges Quizzes"/>
       <div className='flex justify-center'>
-          <button className=''><NavLink to={'quizzes'}>And More</NavLink> </button>
+          <button className=''><NavLink to={'/quizzes'}>And More</NavLink> </button>
       </div>
       <div>
       <div className='flex p-5 justify-center bg-indigo-500 mt-10 overflow-hidden'>
             <div className='text m-5 p-5 w-[40vw]' >
                 <h1 className='text-5xl font-semibold m-5 text-white'>Still Have Questions?</h1>
-                <p className='m-6 text-gray-300'>Don't hesitate, Feel free to ask we're here to help!</p>
-                <button className='ml-10 mt-5 bg-yellow-400 hover:bg-yellow-300 text-slate-900'>Ask Here</button>
+                <p className='m-6 text-gray-300 mb-12'>Don't hesitate, Feel free to ask we're here to help!</p>
+                <NavLink to={'/contact'} className='btn ml-10 mt-5 bg-yellow-400 hover:bg-yellow-300 text-slate-900'>Ask Here</NavLink>
             </div>
 
             <div className='img'>
