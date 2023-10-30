@@ -64,4 +64,5 @@ Feel free to open an issue if you find a bug or want to suggest a feature.
 
 ## License
 
-Not Yet Licenced
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
