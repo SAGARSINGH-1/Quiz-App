@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className='footer flex justify-evenly gap-[15vw]'>
                     <div className='info p-10 w-[30vw]'>
                         <div className='img'>
-                            <img className='img-color' src="./assets/logo.png" alt="" height='150px' width='150px' />
+                            <NavLink to={''}><img src="./assets/logo-wh.png" alt="logo" height="130px" width="130px" /></NavLink>   
                         </div>
                         <div className='text text-lg text-gray-500 my-3 font-normal'>
                             <p>Engage, Educate, and Entertain Yourself: Explore a World of Quizzes to Boost Your Knowledge and Skills.</p>

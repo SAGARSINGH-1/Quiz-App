@@ -23,8 +23,8 @@ export default function Navbar() {
     <div>
       <nav className='p-3 w-[100vw]'>
         <div className='flex justify-between max-w-6xl mx-auto'>
-          <div className='img'>
-            <img src="./assets/logo.png" alt="logo" height="120px" width="120px" />
+          <div className='img mt-2'>
+            <NavLink to={''}><img src="./assets/logo-b.png" alt="logo" height="100px" width="100px" /></NavLink>
           </div>
           <div className='link'>
             <ul className='flex gap-10 text-base font-medium mt-2 poppins text-gray-500'>
