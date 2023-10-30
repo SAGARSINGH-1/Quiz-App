@@ -28,11 +28,11 @@ export default function Navbar() {
           </div>
           <div className='link'>
             <ul className='flex gap-10 text-base font-medium mt-2 poppins text-gray-500'>
-              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={''} className={({ isActive }) => `${isActive ? "text-red-600" : ""}`}>Home</NavLink> </li>
-              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'/quizzes'} className={({ isActive }) => `${isActive ? "text-red-600" : ""}`}>Quizzes</NavLink> </li>
-              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'/about'} className={({ isActive }) => `${isActive ? "text-red-600" : ""}`}>About</NavLink> </li>
-              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'/contact'} className={({ isActive }) => `${isActive ? "text-red-600" : ""}`}>Contact Us</NavLink> </li>
-              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'/help'} className={({ isActive }) => `${isActive ? "text-red-600" : ""}`}>Help</NavLink> </li>
+              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={''} className={({ isActive }) => `${isActive ? "text-indigo-500" : ""}`}>Home</NavLink> </li>
+              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'/quizzes'} className={({ isActive }) => `${isActive ? "text-indigo-500" : ""}`}>Quizzes</NavLink> </li>
+              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'/about'} className={({ isActive }) => `${isActive ? "text-indigo-500" : ""}`}>About</NavLink> </li>
+              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'/contact'} className={({ isActive }) => `${isActive ? "text-indigo-500" : ""}`}>Contact Us</NavLink> </li>
+              <li className='hover:text-pink-400 cursor-pointer'><NavLink to={'/help'} className={({ isActive }) => `${isActive ? "text-indigo-500" : ""}`}>Help</NavLink> </li>
             </ul>
           </div>
           {isClicked ? (
