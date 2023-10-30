@@ -5,6 +5,8 @@ import { PiChatsCircleFill } from 'react-icons/pi';
 import Swipper from '../requirements/Swipper';
 import {RiTwitterXFill} from 'react-icons/ri';
 import {GiChainedHeart} from 'react-icons/gi';
+import { NavLink } from 'react-router-dom'
+
 
 
 
@@ -22,11 +24,11 @@ export default function About() {
         </div>
         <div className='text-center mt-10 text-[32px] w-[725px] font-semibold'>
           <p className=''>
-            <span className='text-pink-600'><FaUserAlt className='inline-block mb-2' />&nbsp;50M+</span>
+            <span className='text-pink-600'><FaUserAlt className='inline-block mb-2' />&nbsp;several</span>
             &nbsp;people, in&nbsp;
-            <span className='text-blue-800'><BsGlobe className='inline-block mb-2' />&nbsp;150+</span>
+            <span className='text-blue-800'><BsGlobe className='inline-block mb-2' />&nbsp;different</span>
             &nbsp;countries answering&nbsp;
-            <span className='text-[#2d9da6]'><PiChatsCircleFill className='inline-block mb-2' />&nbsp;50M</span>
+            <span className='text-[#2d9da6]'><PiChatsCircleFill className='inline-block mb-2' />&nbsp;many</span>
             &nbsp; questions/day.
           </p>
         </div>
@@ -40,7 +42,8 @@ export default function About() {
           <div className='w-[40%] h-[100%] text-center'>
             <h1 className='text-3xl font-bold py-5'>We Love Our Users' Reviews <GiChainedHeart className='inline text-yellow-400 text-4xl'/></h1>
             <p className='text-gray-100 text-xl pb-5'>Here's what some of our amazing users have to say about their Quizzy experience. We're thrilled to share their feedback with you.</p>
-            <button className='mt-2 bg-yellow-400 hover:bg-yellow-300 text-slate-900'>Write your own <RiTwitterXFill className='inline mb-1 text-lg'/></button>
+            <NavLink to={'https://twitter.com/'} target='_blank' className='mt-2 bg-yellow-400 hover:bg-yellow-300 text-slate-900 btn'>Write your own <RiTwitterXFill className='inline mb-1 text-lg'/></NavLink>
+
           </div>
           <div className='h-[300px] w-[400px]'>
             <Swipper />
