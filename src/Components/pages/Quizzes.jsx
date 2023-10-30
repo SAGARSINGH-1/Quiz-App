@@ -9,9 +9,8 @@ export default function Quizzes() {
   const [category, setCategory] = useState(null);
   const [difficulty, setDifficulty] = useState(null);
   const [no_Question, setNo_Question] = useState(null);
-  const [tags, setTags] = useState('');
 
-  const { setAnswers, setQuestions, set_tags, setTotalQuestions } = useContext(UserContext);
+  const { setAnswers, setQuestions, set_category, setTotalQuestions } = useContext(UserContext);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
@@ -24,8 +23,8 @@ export default function Quizzes() {
   }, []);
 
   function fetchQuestions() {
-    if (no_Question && category && difficulty && tags) {
-      fetch(`https://quizapi.io/api/v1/questions?apiKey=rxU1myfAqf2i5gfRIU8epcIbanIVyG0lxmq8DYDp&limit=${no_Question}&category=${category}&difficulty=${difficulty}&type=multiple&tags=${tags}`)
+    if (no_Question && category) {
+      fetch(`https://quizapi.io/api/v1/questions?apiKey=rxU1myfAqf2i5gfRIU8epcIbanIVyG0lxmq8DYDp&category=${category}&difficulty=${difficulty}&limit=${no_Question}`)
         .then((response) => response.json())
         .then((data) => {
           setQuestions(data);
@@ -48,7 +47,7 @@ export default function Quizzes() {
 
   function submitHandler(e) {
     // e.preventDefault();
-    set_tags(tags);
+    set_category(category);
     setTotalQuestions(no_Question);
     fetchQuestions();
   }
@@ -66,11 +65,13 @@ export default function Quizzes() {
                     <select onChange={(e) => setCategory(e.target.value)} id="category" name="category" className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 bg-white text-black" >
                       <option value="any">Any Category</option>
                       <option value="Linux">Linux</option>
-                      <option value="DevOps">DevOps</option>
-                      <option value="Networking">Networking</option>
-                      <option value="Programming">Programming</option>
-                      <option value="Cloud">Cloud</option>
-                      <option value="Kubernetes">Kubernetes</option>
+                      <option value="bash">Bash</option>
+                      <option value="uncategorized">uncategorized</option>
+                      <option value="docker">Docker</option>
+                      <option value="sql">SQL</option>
+                      <option value="cms">CMS</option>
+                      <option value="code">Code</option>
+                      <option value="devops">DevOps</option>
                     </select>
                   </div>
 
@@ -92,24 +93,6 @@ export default function Quizzes() {
                       <option value="10">10</option>
                       <option value="15">15</option>
                       <option value="20">20</option>
-                    </select>
-                  </div>
-
-                  <div className="mb-4">
-                    <label htmlFor="tags" className="block text-gray-700 text-sm font-bold mb-2 ml-2">Tags</label>
-                    <select onChange={(e) => setTags(e.target.value)} name="tags[]" id="tags" className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 bg-white text-black" >
-                      <option value="any">Tags</option>
-                      <option value="Linux">Linux</option>
-                      <option value="BASH">BASH</option>
-                      <option value="PHP">PHP</option>
-                      <option value="Docker">Docker</option>
-                      <option value="HTML">HTML</option>
-                      <option value="MySQL">MySQL</option>
-                      <option value="WordPress">WordPress</option>
-                      <option value="Laravel">Laravel</option>
-                      <option value="Kubernetes">Kubernetes</option>
-                      <option value="JavaScript">JavaScript</option>
-                      <option value="DevOps">DevOps</option>
                     </select>
                   </div>
 

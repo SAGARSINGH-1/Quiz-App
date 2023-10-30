@@ -7,7 +7,7 @@ import {FaRegCheckCircle} from 'react-icons/fa';
 
 function Test() {
     const [isContentLoaded, setContentLoaded] = useState(false);
-    const { answers, questions, tags, totalQuestions, selectedOptions, setSelectedOptions } = useContext(UserContext);
+    const { answers, questions, category, totalQuestions, selectedOptions, setSelectedOptions } = useContext(UserContext);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const questionTime = 20; // Time allocated for each question in seconds
     const [timeRemaining, setTimeRemaining] = useState(questionTime);
@@ -74,11 +74,11 @@ function Test() {
                                         <h1 className='text-lg py-4 relative text-center'>
                                             {currentQuestion.question}
                                             <span className='absolute top-[-29px] text-white font-semibold px-4 bg-indigo-500 left-[41%] rounded-3xl py-2'>
-                                                {tags} | Q{currentQuestionIndex + 1}/{totalQuestions}
+                                                {category} | Q{currentQuestionIndex + 1}/{totalQuestions}
                                             </span>
                                         </h1>
                                     </div>
-                                    <div className='border w-[45rem] gap-3 my-4 flex flex-wrap justify-between items-center '>
+                                    <div className='w-[45rem] gap-3 my-4 flex flex-wrap justify-center p-1 items-center'>
                                         <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]' onClick={(e) => optionHandler(e, 'answer_a_correct')}>
                                             {currentQuestion.answers.answer_a}
                                         </div>
