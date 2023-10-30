@@ -40,7 +40,7 @@ export default function Home() {
             <p className='text-lg text-gray-500 m-5 mb-9'>At our platform, we believe in the power of quizzes to enhance your learning adventure.</p>
           </div>
           <div>
-            <NavLink to={'/quizzes'} className='button ml-10'>Know more</NavLink>
+            <NavLink to={'/help'} className='button ml-10'>Know more</NavLink>
           </div>
         </div>
       </div>
