@@ -56,6 +56,7 @@ function Result() {
                     You Scored : {score}
                   </h2>
                   <button className="ml-8"><NavLink to={'/test'}>Retake test<IoRefreshOutline className="inline mb-1 ml-2 font-bold text-white"/></NavLink></button>
+                  <button className="ml-8"><NavLink to={'/ViewResults'}>View Answers</NavLink></button>
                 </div>
                 <div className="result-image">
                   <img

@@ -59,7 +59,7 @@ function Test() {
         }
         goToNextQuestion();
     }
-
+console.log(questions);
 
     return (
         <>
@@ -81,7 +81,7 @@ function Test() {
                                     <div className='w-[45rem] gap-3 my-4 flex flex-wrap justify-center p-1 items-center'>
                                         <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]' onClick={(e) => optionHandler(e, 'answer_a_correct')}>
                                             {currentQuestion.answers.answer_a}
-                                        </div>
+                                        </div>  
                                         <div className='p-2 text-md border-2 border-gray-300 rounded-sm hover:border-indigo-500 cursor-pointer hover:bg-indigo-100 no-select w-[49%]' onClick={(e) => optionHandler(e, 'answer_b_correct')}>
                                             {currentQuestion.answers.answer_b}
                                         </div>

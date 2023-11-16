@@ -10,7 +10,6 @@ const UserContextProvider = ({ children }) => {
     const [selectedOptions, setSelectedOptions] = useState([]);
 
     useEffect(() => {
-        console.log(answers);
         // Calculate the total number of questions
         if (questions) {
             setTotalQuestions(questions.length);

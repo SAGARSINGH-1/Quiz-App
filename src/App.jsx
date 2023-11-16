@@ -9,6 +9,7 @@ import Help from './Components/pages/Help'
 import Quizzes from './Components/pages/Quizzes'
 import Test from './Components/requirements/Test'
 import Result from './Components/requirements/Result'
+import ViewResult from './Components/requirements/ViewResult'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='contact' element={<Contact />}/>
         <Route path='help' element={<Help />}/>
         <Route path='result' element={<Result/>} />
+        <Route path='ViewResults' element={<ViewResult/>} />
 
         <Route path='*' element={<Error/>} />
       </Route>

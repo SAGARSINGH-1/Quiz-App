@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom'
 
 import { RaceBy } from '@uiball/loaders'
 import UserContextProvider from '../../context/UserContextProvider'
+import ViewResult from '../requirements/ViewResult'
 
 export default function Layout() {
 
