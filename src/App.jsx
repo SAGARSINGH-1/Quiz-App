@@ -10,6 +10,7 @@ import Quizzes from './Components/pages/Quizzes'
 import Test from './Components/requirements/Test'
 import Result from './Components/requirements/Result'
 import ViewResult from './Components/requirements/ViewResult'
+import Login from './Components/pages/Login'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='help' element={<Help />}/>
         <Route path='result' element={<Result/>} />
         <Route path='ViewResults' element={<ViewResult/>} />
+        <Route path='login' element={<Login/>} />
 
         <Route path='*' element={<Error/>} />
       </Route>
