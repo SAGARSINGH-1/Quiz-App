@@ -31,7 +31,7 @@ function App() {
   )
 
   return (
-    <div className="flex justify-center overflow-hidden">
+    <div className="flex justify-center overflow-visible md:overflow-hidden">
       <RouterProvider router={router} />
     </div>
   )

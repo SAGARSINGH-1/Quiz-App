@@ -29,7 +29,7 @@ export default function Layout() {
           {isContentLoaded ? (
             <div className='overflow-hidden'>
               <div className='banner bg-indigo-400 text-white font-medium p-2'>
-                <h3 className='text-center'>"Unlock Knowledge, One Question at a Time."</h3>
+                <h3 className='text-sm md:text-lg text-center'>"Unlock Knowledge, One Question at a Time."</h3>
               </div>
               <div className='page'>
                 <Navbar />

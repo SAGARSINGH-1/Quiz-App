@@ -12,15 +12,15 @@ export default function Help() {
   };
 
   return (
-    <div className='max-w-7xl mx-auto p-5'>
+    <div className='max-w-7xl my-10 md:my-0 mx-auto p-5'>
       <h1 className='text-4xl font-semibold m-5 text-center'>Frequently Asked Questions</h1>
-      <div className=' mx-auto p-5 mt-4'>
-        <div className="ques-ans w-[60vw] mx-auto p-2">
+      <div className=' mx-auto md:p-5 mt-4'>
+        <div className="ques-ans md:w-[60vw] mx-auto md:p-2">
 
           {questions.map((item, index) => (
             <div key={index}>
-              <div className='ques pl-8 p-5 m-5 mb-0 bg-gray-300 flex justify-between cursor-pointer ' onClick={() => toggleAnswer(index)}>
-                <h3 className='text-black font-semibold text-xl select-none'>
+              <div className='ques pl-8 md:p-5 py-3 px-2 md:m-5 m-2 mb-0 bg-gray-300 flex justify-between cursor-pointer ' onClick={() => toggleAnswer(index)}>
+                <h3 className='text-black font-semibold md:text-xl select-none'>
                   <span>Q{index + 1}:</span> {item.ques}
                 </h3>
                 <div>

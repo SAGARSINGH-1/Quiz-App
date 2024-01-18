@@ -9,7 +9,7 @@ export default function Footer() {
         <div className='bg-black text-white'>
             <div className='max-w-7xl mx-auto'>
                 <div className='footer flex justify-evenly gap-[15vw]'>
-                    <div className='info p-10 w-[30vw]'>
+                    <div className='info p-10 md:w-[30vw]'>
                         <div className='img'>
                             <NavLink to={''}><img src="./assets/logo-wh.png" alt="logo" height="130px" width="130px" /></NavLink>   
                         </div>
@@ -17,8 +17,8 @@ export default function Footer() {
                             <p>Engage, Educate, and Entertain Yourself: Explore a World of Quizzes to Boost Your Knowledge and Skills.</p>
                         </div>
 
-                        <div className='my-5'>
-                            <ul className='flex gap-5 text-base font-semibold mt-2 poppins'>
+                        <div className='md:my-5'>
+                            <ul className='flex flex-col gap-5 text-base font-semibold mt-2 poppins'>
                                 <NavLink to={''} className='hover:text-yellow-200 cursor-pointer'>Home</NavLink>
                                 <NavLink to={'/help'} className='hover:text-yellow-200 cursor-pointer'>Features</NavLink>
                                 <li className='hover:text-yellow-200 cursor-pointer'>Blog</li>
@@ -28,7 +28,7 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className='btns p-5 my-auto'>
+                    <div className='btns p-5 my-auto hidden md:block'>
                         <img src="./assets/Foot-img.webp" alt="" height='200px' width='200px' />
                     </div>
                 </div>

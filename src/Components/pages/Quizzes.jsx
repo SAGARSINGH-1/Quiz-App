@@ -55,11 +55,11 @@ export default function Quizzes() {
   return (
     <div>
       {isContentLoaded ? (
-        <div className="max-w-7xl flex  mx-auto overflow-x-auto overflow-y-hidden">
-          <div className="form mt-10">
+        <div className="max-w-7xl md:flex  mx-auto overflow-x-auto overflow-y-hidden">
+          <div className="form md:mt-10">
             <div>
-              <div className='form flex justify-center xl:w-[25vw] md:w-[18vw] overflow-x-auto overflow-y-hidden'>
-                <form className="bg-white p-8 rounded shadow-xl text-left w-[22vw] mt-[15vh] flex flex-col justify-center">
+              <div className='form md:flex justify-center xl:w-[25vw] md:w-[18vw] overflow-x-auto overflow-y-hidden'>
+                <form className="bg-white p-8 rounded shadow-xl text-left md:w-[22vw] mt-[10vh] md:mt-[15vh] flex flex-col justify-center">
                   <div className="mb-4">
                     <label htmlFor="category" className="block text-gray-700 text-sm font-bold mb-2 ml-2 ">Category</label>
                     <select onChange={(e) => setCategory(e.target.value)} id="category" name="category" className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 bg-white text-black" >

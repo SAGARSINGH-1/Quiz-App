@@ -12,14 +12,14 @@ function Result() {
 
   const imageSource = score >= questions.length / 2 ? "./assets/Trophi.jpg" : "./assets/Failed.png";
   return (
-    <div>
+    <div className="mt-10 md:mt-0">
       {
         questions.length && answers.length && selectedOptions.length ? (
-          <div className="max-w-6xl mx-auto shadow-lg p-2">
-            <div className="result-box bg-white text-black m-5">
-              <div className="flex justify-center m-5">
-                <div className="p-5 m-5 w-[40%]">
-                  <h1 className="text-5xl font-bold ">Quiz Result</h1>
+          <div className="md:max-w-6xl mx-auto shadow-lg p-2">
+            <div className="result-box bg-white text-black md:m-5">
+              <div className="flex md:flex-row flex-col-reverse justify-center md:m-5">
+                <div className="p-5 m-5 md:w-[40%]">
+                  <h1 className="text-5xl -3xl font-bold ">Quiz Result</h1>
                   <h3 className="text-base font-medium text-gray-400 m-5 ">
                     Here Are Your Quiz Results
                   </h3>
@@ -55,15 +55,15 @@ function Result() {
                   <h2 className="text-2xl font-bold text-gray-400  ml-5 mb-5">
                     You Scored : {score}
                   </h2>
-                  <button className="ml-8"><NavLink to={'/test'}>Retake test<IoRefreshOutline className="inline mb-1 ml-2 font-bold text-white"/></NavLink></button>
+                  <button className="ml-8 my-2"><NavLink to={'/test'}>Retake test<IoRefreshOutline className="inline mb-1 ml-2 font-bold text-white"/></NavLink></button>
                   <button className="ml-8"><NavLink to={'/ViewResults'}>View Answers</NavLink></button>
                 </div>
-                <div className="result-image">
+                <div className="result-image mx-auto">
                   <img
-                    className="h-[50vh]"
+                    className="md:h-[50vh] md:w-[400px] h-[10vh] w-[20vw]"
                     src={imageSource}
                     alt="passed"
-                    width="400px"
+                    // width="400px"
                   />
                 </div>
               </div>
