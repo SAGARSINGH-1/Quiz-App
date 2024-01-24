@@ -10,7 +10,7 @@ export default function Home() {
         <div className='flex md:flex-row flex-col-reverse text-center md:text-left justify-center p-3 overflow-visible'>
           <div className='text md:p-5 pt-10 mt-10' >
             <div className='md:w-[35vw]'>
-              <p className='text-4xl m-2 text-purple-400 font-medium'>Welcome To antaira</p>
+              <p className='text-4xl m-2 text-purple-400 font-medium'>Welcome <span className='text-black'>To QUIZZY</span> </p>
               <h1 className='text-4xl m-2 '>Where Every <span className='text-indigo-500 font-semibold'>Questions</span></h1>
               <h1 className='text-4xl m-2'> is a Step Towards</h1>
               <h1 className='text-5xl m-2 '>Mastery</h1>
