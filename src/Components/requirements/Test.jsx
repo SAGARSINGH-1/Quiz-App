@@ -2,14 +2,15 @@ import { BiTimer } from 'react-icons/bi';
 import { useState, useContext, useEffect } from "react";
 import UserContext from "../../context/UserContext";
 import { RaceBy } from "@uiball/loaders";
-import { NavLink } from 'react-router-dom';
+import { NavLink, unstable_HistoryRouter } from 'react-router-dom';
 import { FaRegCheckCircle } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 function Test() {
     const [isContentLoaded, setContentLoaded] = useState(false);
     const { answers, questions, category, totalQuestions, selectedOptions, setSelectedOptions } = useContext(UserContext);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const questionTime = 20; // Time allocated for each question in seconds
+    let questionTime = 20; // Time allocated for each question in seconds
     const [timeRemaining, setTimeRemaining] = useState(questionTime);
     const [submit, setSubmit] = useState(false);
     let selected = null;
@@ -41,13 +42,18 @@ function Test() {
         };
     }, []);
 
+    const navigate = useNavigate();
 
     const goToNextQuestion = () => {
         if (currentQuestionIndex < questions.length - 1) {
             setCurrentQuestionIndex(currentQuestionIndex + 1);
             setTimeRemaining(questionTime)
-        } else if (currentQuestionIndex === questions.length - 1) {
+        } else if (currentQuestionIndex === questions.length - 1 ) {
+            if(timeRemaining === 0) {
+                questionTime = 0;
+            }
             setSubmit(true);
+            navigate("/result");
         }
     };
 
@@ -59,7 +65,7 @@ function Test() {
         }
         goToNextQuestion();
     }
-    console.log(questions);
+    //console.log(questions);
 
     return (
         <div className='md:w-auto w-[100vw]'>
@@ -102,10 +108,6 @@ function Test() {
                             </div>)
 
                     }
-                    {/* <div className='h-[60px] w-[60px] absolute bg-indigo-200 rounded-full bottom-[-10px] left-[115px]'></div>
-                    <div className='h-[40px] w-[40px] absolute bg-indigo-200 rounded-full top-[15px] right-[251px]'></div>
-                    <div className='h-[120px] w-[120px] absolute bg-indigo-400 rounded-full top-[15px] left-[115px]'></div>
-                    <div className='h-[120px] w-[120px] absolute bg-indigo-400 rounded-full bottom-[20px] right-[125px]'></div> */}
                 </div>
             ) : (
                 <div className="flex flex-col items-center top-[30vh] min-h-screen relative">
