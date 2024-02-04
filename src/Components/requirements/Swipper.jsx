@@ -40,7 +40,7 @@ export default function Swipper() {
       >
         {review.map((item) => (
           <SwiperSlide key={item.id} className='flex justify-center items-center text-center'>
-            <img className='block object-cover border-4 border-indigo-500 rounded-xl' src={item.imgsrc} alt="" srcSet="" />
+            <img className='block object-cover border-4 border-indigo-500 rounded-xl' src={item.imgsrc} alt="slide" loading='lazy'/>
           </SwiperSlide>
         ))}
       </Swiper>

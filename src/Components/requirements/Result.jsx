@@ -63,7 +63,7 @@ function Result() {
                     className="md:h-[50vh] md:w-[400px] h-[10vh] w-[20vw]"
                     src={imageSource}
                     alt="passed"
-                    // width="400px"
+                    loading='lazy'
                   />
                 </div>
               </div>

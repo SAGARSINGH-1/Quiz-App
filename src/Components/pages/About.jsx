@@ -7,9 +7,6 @@ import {RiTwitterXFill} from 'react-icons/ri';
 import {GiChainedHeart} from 'react-icons/gi';
 import { NavLink } from 'react-router-dom'
 
-
-
-
 export default function About() {
 
   return (
