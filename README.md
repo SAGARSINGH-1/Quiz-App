@@ -4,6 +4,9 @@
 
 Quizzy is a feature-rich quiz application built using React and enhanced with the power of Tailwind CSS. This application offers an interactive and engaging platform for creating and taking quizzes. With a sleek and user-friendly UI, Quizzy makes learning and testing knowledge a breeze.
 
+
+<img width="941" height="416" alt="image" src="https://github.com/user-attachments/assets/1e0024a6-820b-4c86-bd72-ff7cab59c2fe" />
+
 Read more about the idea [here](ABOUT.md) or just open ABOUT.md file.
 
 ## How it works
